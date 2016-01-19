@@ -1,4 +1,12 @@
 <p id="notice"><%= notice %></p>
+#login and logout
+<% if user_signed_in?%>
+<li>
+  <%= link_to('Logout', destroy_user_session_path,:method => :delete) %>
+</li>
+<% else %>
+<%= Link_to('Login', user_session_path) %>
+<% end %>
 
 <h1>Listing Pages</h1>
 
