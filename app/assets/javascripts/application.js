@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+<<<<<<< HEAD
 //= require bootstrap-sprockets
 //= bootstrap.min
 //= jquery.fancybox
@@ -23,3 +24,6 @@
 //= pages.coffee
 //=	slider
 //=	wow.min
+=======
+//= require ckeditor/init
+>>>>>>> 42f8dc6f87467a1d260f3caacf146b985195ec32
