@@ -1,34 +1,43 @@
 <p id="notice"><%= notice %></p>
+      <section id="works" class="works">
+                <div class="container">
+                    <div class="section-heading">
+                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Listing page</h1>
+                        <p class="wow fadeInDown" data-wow-delay=".5s">
+                            Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12">
+                          <% @pages.each do |page| %>
+                            <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                                <div class="img-wrapper">
+                                    <%= image_tag page.avatar.url(:thumb) %>
+                                    <div class="overlay">
+                                        <div class="buttons">
+                                            <%= link_to 'Show', page %>
+                                            <!-- User login hiij orson tohioldold edit, destroy pathuud haragdana -->
+                                        <% if user_signed_in? %>
+                                          <td><%= link_to 'Edit', edit_page_path(page) %></td>
+                                          <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: '                                  Are you sure?' } %></td>
+                                        <% end %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <figcaption>
+                                <h4>
+                                   <%= page.name %>
+                                </h4>
+                                <p>
+                                   <%= page.content.html_safe %>
+                                 </p>
+                                </figcaption>
+                            </figure>
+                          <%  end %>
+                        </div>
+                    </section> <!-- #works -->
 
-<h1>Listing Pages</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.name %></td>
-        <td><%= page.content.html_safe %></td>
-        <td><%= image_tag page.avatar.url(:thumb) %></td>
-        <td><%= link_to 'Show', page %></td>
-<!-- User login hiij orson tohioldold edit, destroy pathuud haragdana -->
-      <% if user_signed_in? %>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+            <br>
 <% if user_signed_in? %>
   <%= link_to 'New content', new_page_path %>
-<% end %>
+<% end %>     
