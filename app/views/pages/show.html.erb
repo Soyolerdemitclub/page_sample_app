@@ -11,6 +11,8 @@
 </h2>
 
 <td><%= image_tag @page.avatar.url(:medium) %></td>
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
+<!-- Hereglegch hevterch orson tohioldold edit heseg haragdana -->
+<% if user_signed_in? %>
+	<%= link_to 'Edit', edit_page_path(@page) %>
+<% end %>
 <%= link_to 'Back', pages_path %>
