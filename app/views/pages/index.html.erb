@@ -15,11 +15,14 @@
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.name %></td>
-        <td><%= page.content %></td>
+        <td><%= page.content.html_safe %></td>
         <td><%= image_tag page.avatar.url(:thumb) %></td>
         <td><%= link_to 'Show', page %></td>
+<!-- User login hiij orson tohioldold edit, destroy pathuud haragdana -->
+      <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_page_path(page) %></td>
         <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
