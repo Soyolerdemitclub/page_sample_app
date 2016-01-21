@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
+//= bootstrap.min
+//= jquery.fancybox
+//=	jquery.min
+//=	main
+//=	owl.carousel.min
+//= pages.coffee
+//=	slider
+//=	wow.min
