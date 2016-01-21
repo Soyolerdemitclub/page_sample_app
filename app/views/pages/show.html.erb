@@ -7,7 +7,7 @@
 
 <h2>
   <strong>Content:</strong>
-  <%= @page.content %>
+  <%= @page.content.html_safe %>
 </h2>
 
 <td><%= image_tag @page.avatar.url(:medium) %></td>
