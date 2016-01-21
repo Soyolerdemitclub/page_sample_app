@@ -14,16 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-<<<<<<< HEAD
 //= require bootstrap-sprockets
-//= bootstrap.min
-//= jquery.fancybox
-//=	jquery.min
-//=	main
-//=	owl.carousel.min
-//= pages.coffee
-//=	slider
-//=	wow.min
-=======
+//= require bootstrap.min
+//= require jquery.fancybox
+//=	require jquery.min
+//=	require main
+//=	require owl.carousel.min
+//= require pages.coffee
+//=	require slider
+//=	require wow.min
 //= require ckeditor/init
->>>>>>> 42f8dc6f87467a1d260f3caacf146b985195ec32
