@@ -2,6 +2,7 @@
       <section id="works" class="works">
                 <div class="container">
                     <div class="section-heading">
+<<<<<<< HEAD
                         <h1 class="listing_page" data-wow-delay="1s">Listing page</h1>
                         <p class="wow fadeInDown" data-wow-delay=".5s">
 
@@ -42,3 +43,44 @@
   <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s"<%= link_to 'New content', new_page_path %>
   
 <% end %>     
+=======
+                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Listing page</h1>
+                        <p class="wow fadeInDown" data-wow-delay=".5s">
+                            Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12">
+                          <% @pages.each do |page| %>
+                            <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                                <div class="img-wrapper">
+                                    <%= image_tag page.avatar.url(:thumb) %>
+                                    <div class="overlay">
+                                        <div class="buttons">
+                                            <%= link_to 'Show', page %>
+                                            <!-- User login hiij orson tohioldold edit, destroy pathuud haragdana -->
+                                        <% if user_signed_in? %>
+                                          <td><%= link_to 'Edit', edit_page_path(page) %></td>
+                                          <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: '                                  Are you sure?' } %></td>
+                                        <% end %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <figcaption>
+                                <h4>
+                                   <%= page.name %>
+                                </h4>
+                                <p>
+                                   <%= page.content.html_safe %>
+                                 </p>
+                                </figcaption>
+                            </figure>
+                          <%  end %>
+                        </div>
+                    </section> <!-- #works -->
+
+            <br>
+<% if user_signed_in? %>
+  <%= link_to 'New content', new_page_path %>
+<% end %>     
+>>>>>>> 7b00f515be6ab8ff546ba712736a6d3a46eb6c1f
