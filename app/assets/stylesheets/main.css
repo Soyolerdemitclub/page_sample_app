@@ -1120,3 +1120,19 @@ article {
   bottom: 0%;
   max-width: 100%;
 }
+.releaseInfo {
+  max-width: 515px;
+  margin: 0 auto;
+  text-align: justify;
+}
+.alert h3, .alert h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.button1 p{
+  margin-top: 10px;
+}
+.button2 p{
+  margin-top: 25px;
+}

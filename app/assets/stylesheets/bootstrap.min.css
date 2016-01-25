@@ -26,3 +26,21 @@
 	border-radius: 4px;
 	line-height: 1.42857143;
 }
+.alert-info1 {
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.alert1 {
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert h4 {
+    margin-top: 0;
+    color: inherit;
+}

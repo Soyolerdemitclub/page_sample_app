@@ -1,3 +1,4 @@
+<center>
 <%= form_for @page, url: pages_path, html: { multipart: true } do |form| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
@@ -27,3 +28,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</center>

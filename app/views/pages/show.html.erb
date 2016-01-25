@@ -1,18 +1,35 @@
 <p id="notice"><%= notice %></p>
+<center>
+<div class="alert1 alert-info1 releaseInfo">
+	<h4>
+	  <%= @page.name %>
+	</h4>
+	
+	<h4>
+	  <%= @page.content.html_safe %>
+	</h4>
 
-<h2>
-  <strong>Name:</strong>
-  <%= @page.name %>
-</h2>
+		<div class="row">
+		  <div class="epz">
+            <div class="thumbnails">
+                <div class="img-wrapper">
+                	
+					<%= image_tag @page.avatar.url(:medium) %>
+					
+</div>
+					<div class="button1">
+					<center><p><% if user_signed_in? %>
+					<%= link_to 'Edit', edit_page_path(@page), :class => "btn btn-default btn-green" %>
+					<% end %>
+					<%= link_to 'Back', pages_path, :class => "btn btn-default btn-green"%>
+					</p>
+					</center>
+					</div>
+				</div>
+			</div>
+		  </div>
+		 </div>
 
-<h2>
-  <strong>Content:</strong>
-  <%= @page.content.html_safe %>
-</h2>
-
-<td><%= image_tag @page.avatar.url(:medium) %></td>
 <!-- Hereglegch hevterch orson tohioldold edit heseg haragdana -->
-<% if user_signed_in? %>
-	<a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s"<%= link_to 'Edit', edit_page_path(@page) %>
-<% end %>
-<a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s"<%= link_to 'Back', pages_path %>
+
+</center>
