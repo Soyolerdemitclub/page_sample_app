@@ -53,17 +53,17 @@
                 <!-- main menu -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
-                        <%= @papers = papers_contents %>
-                        <ul class="nav navbar-nav navbar-right caret">
-                            <li><%= @papers.limit(3).each do |paper| %></li>
-                             <li><%= link_to paper.slug, paper %></li>
+                        <% @papers = papers_contents %>
+                        <ul class="nav navbar-nav navbar-right">
+                            <% @papers.each do |paper| %>
+                            <li><%= link_to paper.slug, paper %></li>
                         <% end %>
-                            <li><% if user_signed_in? %></li>
+                            <% if user_signed_in? %>
                             <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
-                        	<li><% else %></li>
+                        	<% else %>
                             <!-- Login heseg drop down oruulj ogson ni-->
                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User</span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User <span class="caret"></span></a>
                                 <div class="dropdown-menu">
                                     <ul>
                         	            <li><%= link_to 'Login', user_session_path %></li>
