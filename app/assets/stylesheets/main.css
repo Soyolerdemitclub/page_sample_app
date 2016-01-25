@@ -1122,7 +1122,10 @@ article {
 }
 .releaseInfo {
   max-width: 515px;
-  margin: 0 auto;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: auto;
   text-align: justify;
 }
 .alert h3, .alert h4 {
