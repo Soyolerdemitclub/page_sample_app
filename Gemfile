@@ -26,6 +26,7 @@ gem 'paperclip', '~> 4.3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'ckeditor'
 gem 'friendly_id', '~> 5.1.0'
+gem 'rails_admin'
 
 
 # Use ActiveModel has_secure_password
