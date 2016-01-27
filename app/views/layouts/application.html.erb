@@ -15,7 +15,7 @@
         <meta charset="utf-8">  
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>Timer Agency Template</title>
+        <title>SoyolErdem ITCLUB</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -52,23 +52,14 @@
                 </div>
                 <!-- main menu -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <% @papers = papers_contents %>
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <% @papers.limit(3).each do |paper| %>
-                                <li><%= link_to paper.slug, paper %></li>
-                            <% end %>
                             <li><% if user_signed_in? %></li>
                             <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
                             <li><% else %></li>
                             <!-- Login heseg drop down oruulj ogson ni-->
-                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User <span class="caret"></span></a>
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><%= link_to 'Login', user_session_path %></li>
-                                        <li><%= link_to 'Sign up', new_user_registration_path %></li>
-                                    </ul>
+                            <li><%= link_to 'Login', user_session_path %></li>           
+                            </ul>
                             <% end %>
                         </ul>
                     </div>
@@ -85,89 +76,23 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,<br> quasi dolores numquam dolor vero ex, tempora commodi repellendus quod laborum.
                         </p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-lg-4 col-xs-12">
-                            <div class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                                <div class="media-left">
-                                    <div class="icon">
-                                        <i class="ion-ios-flask-outline"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Media heading</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 col-xs-12">
-                            <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                                <div class="media-left">
-                                    <div class="icon">
-                                        <i class="ion-ios-lightbulb-outline"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Well documented.</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 col-xs-12">
-                            <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="900ms">
-                                <div class="media-left">
-                                    <div class="icon">
-                                        <i class="ion-ios-lightbulb-outline"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Well documented.</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 col-xs-12">
-                            <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1200ms">
-                                <div class="media-left">
-                                    <div class="icon">
-                                        <i class="ion-ios-americanfootball-outline"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Free updates</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 col-xs-12">
-                            <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1500ms">
-                                <div class="media-left">
-                                    <div class="icon">
-                                        <i class="ion-ios-keypad-outline"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Solid Support</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 col-xs-12">
-                            <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1800ms">
-                                <div class="media-left">
-                                    <div class="icon">
-                                        <i class="ion-ios-barcode-outline"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Simple Installation</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </section> <!-- /#feature -->
-                            
+            </section>
+              <section id="works" class="works">
+                <div class="container1">
+                    <div class="section-heading">
+                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
+                    </div>
+                                <div class="row">
+                                    <div class="col-sm-4 column-xs-1 epz">
+                                    <% @papers = papers_contents %>
+                                    <% @papers.limit(3).each do |paper| %>
+                                    </div>
+                <div class="alert1 alert-info1 releaseInfo1 col-sm-4 thumbnail1 row epz1 column-xs-1">
+                <h3><%= link_to paper.slug, paper %></h3>
+                <% end %>
+            </div>
+              </section>         
             <!--
             ==================================================
             Call To Action Section Start

@@ -1139,3 +1139,21 @@ article {
 .button2 p{
   margin-top: 25px;
 }
+.button3 p{
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.releaseInfo1 {
+  max-width: 100px;
+}
+.epz1 h3 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  max-width: 100%;
+  bottom: 0%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: -5px;
+}
