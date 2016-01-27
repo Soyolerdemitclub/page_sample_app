@@ -1,6 +1,12 @@
+<div class="alert1 alert-info1 releaseInfo">
 <h1>Editing Paper</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @paper %> |
-<%= link_to 'Back', papers_path %>
+</div>
+<center>
+<div class="button2">
+<p>
+<%= link_to 'Show', @paper, :class => "btn btn-default btn-green" %> 
+<%= link_to 'Back', papers_path, :class => "btn btn-default btn-green" %>
+</p>
+</center>

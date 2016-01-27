@@ -44,3 +44,18 @@
     margin-top: 0;
     color: inherit;
 }
+.column-sm-4 {
+	float: left;
+	width:33.33333333%;
+	position: relative;
+}
+.thumbnail1 {
+	display: block;
+	padding: 4px;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	line-height: 1.42857143;
+	margin-right: 80px;
+	margin-left: 0;
+}

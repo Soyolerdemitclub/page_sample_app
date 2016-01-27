@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="alert1 alert-info1 releaseInfo">
 <p>
   <strong>Name:</strong>
   <%= @paper.name %>
@@ -14,6 +14,11 @@
   <strong>Slug:</strong>
   <%= @paper.slug %>
 </p>
-
-<%= link_to 'Edit', edit_paper_path(@paper) %> |
-<%= link_to 'Back', papers_path %>
+</div>
+<center>
+	<div class="button2">
+		<p>
+        <%= link_to 'Edit', edit_paper_path(@paper), :class => "btn btn-default btn-green" %>
+        <%= link_to 'Back', papers_path, :class => "btn btn-default btn-green" %>
+        </p>
+</center>
