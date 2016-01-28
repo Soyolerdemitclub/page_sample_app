@@ -1148,10 +1148,12 @@ article {
 .releaseInfo1 {
   max-width: 100px;
 }
+.releaseInfo2 {
+  max-width: 100%;
+}
 .epz1 h3 {
   font-size: 2em;
   letter-spacing: 1px;
-  max-width: 100%;
   bottom: 0%;
   padding-right: 10px;
   padding-left: 10px;

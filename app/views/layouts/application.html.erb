@@ -54,12 +54,23 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><% if user_signed_in? %></li>
-                            <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
-                            <li><% else %></li>
-                            <!-- Login heseg drop down oruulj ogson ni-->
-                            <li><%= link_to 'Login', user_session_path %></li>           
-                            </ul>
+                            <li><%= link_to 'Pages', pages_path %></li>
+                            <li><%= link_to 'Papers', papers_path %></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">User<span class="caret"></span></a>
+                                    <div class="dropdown-menu">
+                                    <ul>
+                                        <li><% if user_signed_in? %></li>
+                                        <li><%= link_to 'new content', new_page_path %></li>
+                                        <li><%= link_to 'New Paper', new_paper_path %></li>
+                                        <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
+                                        <li><% else %></li>
+                                        <!-- Login heseg drop down oruulj ogson ni-->
+                                        <li><%= link_to 'Login', user_session_path %></li>
+                                    </ul>      
+                                    </div>
+                                </div>
+                            </li>
                             <% end %>
                         </ul>
                     </div>
@@ -68,30 +79,25 @@
             </div>
         </header>
             <%= yield %>    
-            <section id="feature">
-                <div class="container">
-                    <div class="section-heading">
-                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Offer From Me</h1>
-                        <p class="wow fadeInDown" data-wow-delay=".5s">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,<br> quasi dolores numquam dolor vero ex, tempora commodi repellendus quod laborum.
-                        </p>
-                    </div>
-                </div>
-            </section>
               <section id="works" class="works">
                 <div class="container1">
                     <div class="section-heading">
                         <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
                     </div>
                                 <div class="row">
-                                    <div class="col-sm-4 column-xs-1 epz">
+                                    <div class="column-xs-1 epz">
                                     <% @papers = papers_contents %>
                                     <% @papers.limit(3).each do |paper| %>
                                     </div>
-                <div class="alert1 alert-info1 releaseInfo1 col-sm-4 thumbnail1 row epz1 column-xs-1">
-                <h3><%= link_to paper.slug, paper %></h3>
-                <% end %>
-            </div>
+                                    <div class="alert1 alert-info1 column-sm-4 thumbnail2 row epz1">
+                                    <center><h3><%= link_to paper.slug, paper %></h3></center>
+                                        <div class="image1">
+                                        <h3><td><%= image_tag paper.image.url(:thumb) %></td></h3>
+                                        </div>
+                                    <% end %>
+                                    </div>
+                                </div>
+                    </div>
               </section>         
             <!--
             ==================================================

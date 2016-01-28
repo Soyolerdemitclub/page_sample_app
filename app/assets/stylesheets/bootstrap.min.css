@@ -25,6 +25,7 @@
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	line-height: 1.42857143;
+	margin-bottom: 20px;
 }
 .alert-info1 {
 	color: #31708f;
@@ -46,8 +47,10 @@
 }
 .column-sm-4 {
 	float: left;
-	width:33.33333333%;
-	position: relative;
+	width: 28%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	overflow: hidden;
 }
 .thumbnail1 {
 	display: block;
@@ -56,6 +59,18 @@
 	border: 2px solid #ddd;
 	border-radius: 4px;
 	line-height: 1.42857143;
-	margin-right: 80px;
-	margin-left: 0;
+}
+.image1 {
+	margin: 0;
+}
+.thumbnail2 {
+	padding-top: 4px;
+	padding-left: 0px;
+	padding-bottom: 4px;
+	padding-right:0px;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	line-height: 1.42857143;
+	display: block;
 }

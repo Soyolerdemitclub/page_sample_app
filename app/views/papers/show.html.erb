@@ -1,25 +1,30 @@
 <p id="notice"><%= notice %></p>
+<center>
 <div class="alert1 alert-info1 releaseInfo">
-<p>
-  <strong>Name:</strong>
+<h4>
   <%= @paper.name %>
-</p>
+</h4>
 
-<p>
-  <strong>Content:</strong>
-  <%= @paper.content %>
-</p>
+<h4>
+  <%= @paper.content.html_safe %>
+</h4>
 
-<p>
-  <string>Image:</strong>
-  <%= image_tag @paper.image.url(:medium) %>
-</p>
 
-<p>
-  <strong>Slug:</strong>
+    <div class="row">
+      <div class="epz">
+            <div class="thumbnails">
+                <div class="img-wrapper">
+                <%= image_tag @paper.image.url(:medium) %>
+                </div>
+            </div>
+      </div>
+    </div>
+
+  <h4>Slug:
   <%= @paper.slug %>
-</p>
+  </h4>
 </div>
+</center>
 <center>
 	<div class="button2">
 		<p>
