@@ -54,14 +54,16 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><%= link_to 'Pages', pages_path %></li>
-                            <li><%= link_to 'Papers', papers_path %></li>
+                            <% if current_user %>
+                                <li><%= link_to 'Pages', pages_path %></li>
+                                <li><%= link_to 'Papers', papers_path %></li>
+                            <% else %>
+                                <li><%= link_to 'Login', user_session_path %></li>
+                            <% end %>
                             <li class="dropdown">
                                 <div class="dropdown-toggle" data-toggle="dropdown">
                                         <% if current_user %>
                                             <%= image_tag(current_user.avatar.url(:thumb), class: "round-image-50") %>
-                                        <% else %>
-                                            Login
                                         <% end %>
                                     <span class="caret"></span></div>
                                     <div class="dropdown-menu">
@@ -74,9 +76,6 @@
                                         <li><%= link_to 'new content', new_page_path %></li>
                                         <li><%= link_to 'New Paper', new_paper_path %></li>
                                         <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
-                                        <li><% else %></li>
-                                        <!-- Login heseg drop down oruulj ogson ni-->
-                                        <li><%= link_to 'Login', user_session_path %></li>
                                     </ul>      
                                     </div>
 
