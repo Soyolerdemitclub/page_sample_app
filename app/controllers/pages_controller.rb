@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.all.order('created_at DESC')
+    @pages = Page.order('created_at DESC').page(params[:page]).per(6)
   end
 
   # GET /pages/1

@@ -27,6 +27,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'ckeditor'
 gem 'friendly_id', '~> 5.1.0'
 gem 'rails_admin'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 
 # Use ActiveModel has_secure_password
