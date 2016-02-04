@@ -93,45 +93,7 @@
                 <!-- /main nav -->
             </div>
         </header>
-            <%= yield %>    
-              <section id="works" class="works">
-                <div class="container1">
-                    <div class="section-heading">
-                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
-                    </div>
-                                <div class="row">
-                                    <div class="column-xs-1 epz">
-                                    <% @papers = papers_contents %>
-                                    <% @papers.limit(3).each do |paper| %>
-                                    </div>
-                                    <div class="alert1 alert-info1 column-sm-4 thumbnail2 row epz1">
-                                    <center><h3><%= link_to paper.slug, paper %></h3></center>
-                                        <div class="image1">
-                                        <h3><td><%= image_tag paper.image.url(:thumb) %></td></h3>
-                                        </div>
-                                    <% end %>
-                                    </div>
-                                </div>
-                    </div>
-              </section>         
-            <!--
-            ==================================================
-            Call To Action Section Start
-            ================================================== -->
-            <section id="call-to-action">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="block">
-                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
-                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
-                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
+            <%= yield %> 
             <!--
             ==================================================
             Footer Section Start

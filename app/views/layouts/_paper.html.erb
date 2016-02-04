@@ -1,0 +1,20 @@
+              <section id="works" class="works">
+                <div class="container1">
+                    <div class="section-heading">
+                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
+                    </div>
+                                <div class="row">
+                                    <div class="column-xs-1 epz">
+                                    <% @papers = papers_contents %>
+                                    <% @papers.limit(3).each do |paper| %>
+                                    </div>
+                                    <div class="alert1 alert-info1 column-sm-4 thumbnail2 row epz1">
+                                    <center><h3><%= link_to paper.slug, paper %></h3></center>
+                                        <div class="image1">
+                                        <h3><td><%= image_tag paper.image.url(:thumb) %></td></h3>
+                                        </div>
+                                    <% end %>
+                                    </div>
+                                </div>
+                    </div>
+              </section>   
