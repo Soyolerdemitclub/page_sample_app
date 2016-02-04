@@ -75,6 +75,9 @@
                                         <li><% if current_user %></li>
                                         <li>Hi, <%= current_user.name %></li>
                                         <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+                                            <li><% if current_user %></li>
+                                            <li><%= link_to 'Admin Dashboard', rails_admin_path %></li>
+                                            <% end -%>
                                         <li><%= link_to 'new content', new_page_path %></li>
                                         <li><%= link_to 'New Paper', new_paper_path %></li>
                                         <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
