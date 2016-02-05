@@ -1,48 +1,42 @@
-<p id="notice"><%= notice %></p>
-<p id="notice"><%= notice %></p>
-<div class="alert1 alert-info1 releaseInfo">
-<h1>Listing Papers</h1>
-
-<table>
-  <thead>
-    <section id="works" class="works">
-      <div class="container1">
-        <div class="section-heading">
-          <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
-        </div>
-          <div class="row">
-            <div class="alert1 alert-info1 releaseInfo">
-              Name
-              Content
-              Slug
+  <section id="works" class="works">
+    <div class="container1">
+      <div class="section-heading">
+      <h1 class="title wow fadeInDown" data-wow-delay=".3s">Papers</h1>
+      </div>
+        <div class="row">
+          <% @papers.each do |paper| %>
+          <div class="col-sm-4 column-xs-1 epz">
+            <div class="thumbnails">
+              <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                <div class="img-wrapper">
+                    <td><%= paper.name %></td>
+                    <td><%= paper.content %></td>
+                    <td><%= image_tag paper.image.url(:thumb) %></td>
+                    <td><%= paper.slug %></td>
+                    <div class="overlay">
+                      <div class="buttons">
+                        <%= link_to 'Show', paper %>
+                          <!-- User login hiij orson tohioldold edit, destroy pathuud haragdana -->
+                            <% if user_signed_in? %>
+                              <%= link_to 'Edit', edit_paper_path(paper) %>
+                              <%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' } %>
+                            <% end %>
+                      </div>
+                    </div>
             </div>
+                </div>
+                  <figcaption>
+                    <h4>
+                      <%= paper.name %>
+                    </h4>
+                    <h3>
+                        <%= paper.content.html_safe %>
+                    </h3>
+                  </figcaption>
+                </figure>
+            </div>
+            <% end %>
           </div>
         </div>
-      </div>
+    </div>
     </section>
-  </thead>
-
-  <tbody>
-    <% @papers.each do |paper| %>
-      <tr>
-        <td><%= paper.name %></td>
-        <td><%= paper.content %></td>
-        <td><%= image_tag paper.image.url(:thumb) %></td>
-        <td><%= paper.slug %></td>
-        <div class="button3 buttons">
-        <p>
-          <%= link_to 'Show', paper, :class => "btn btn-default btn-green" %>
-          <%= link_to 'Edit', edit_paper_path(paper), :class => "btn btn-default btn-green" %>
-          <%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-green" %>
-        </p>
-      </div>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-</div>
-<div class="button2">
-<center><p><%= link_to 'New Paper', new_paper_path, :class => "btn btn-default btn-green" %></center></p>
-</div>
