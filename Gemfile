@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'rails_admin'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem 'ratyrate'
 
 
 # Use ActiveModel has_secure_password

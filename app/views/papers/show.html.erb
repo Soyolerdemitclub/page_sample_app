@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 <center>
 <div class="alert1 alert-info1 releaseInfo">
+
+Vote | <%= @paper.rates("speed").count %> ratings :
+   <%= rating_for @paper, "speed", :enable_half => true, :half_show => true, :disable_after_rate => false %>
+
 <h4>
   <%= @paper.name %>
 </h4>
@@ -24,13 +28,10 @@
   <%= @paper.slug %>
   </h4>
 </div>
-<<<<<<< HEAD
 </center>
-=======
 
 <%= render 'disqus' =%>
 
->>>>>>> ochir
 <center>
 	<div class="button2">
 		<p>

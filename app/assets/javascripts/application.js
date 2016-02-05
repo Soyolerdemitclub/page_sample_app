@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.raty
+//= require ratyrate
 //= require bootstrap-sprockets
 //= require bootstrap.min
 //= require jquery.fancybox
