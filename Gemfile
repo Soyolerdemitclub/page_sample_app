@@ -30,6 +30,7 @@ gem 'rails_admin'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'ratyrate'
+gem 'tinymce-rails'
 
 
 # Use ActiveModel has_secure_password
