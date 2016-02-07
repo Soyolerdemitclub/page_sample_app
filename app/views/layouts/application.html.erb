@@ -64,11 +64,9 @@
                                 <li><%= link_to 'Login', user_session_path %></li>
                             <% end %>
                             <li class="dropdown">
-                                <div class="dropdown-toggle" data-toggle="dropdown">
+                                <div class="btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
                                         <% if current_user %>
-                                        <!-- Useriin zurag end bairlana -->
-                                        <!-- Round-image-50 - iig app/stylesheets/custom.css.scss - ees orj haraarai. -->
-                                            <%= image_tag(current_user.avatar.url(:thumb), class: "round-image-50") %>
+                                            <%= image_tag(current_user.avatar.url(:thumb), class: "round-image-50 ") %>
                                         <% end %>
                                     <span class="caret"></span></div>
                                     <div class="dropdown-menu">
